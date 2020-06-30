@@ -13,6 +13,10 @@ client.on("message", async message => {
   if(message.content == `<@${client.id}>` || message.content == `<@!${client.id}>`) {
     message.reply("My prefix for this server is ``" + prefix + "``") 
   }
+  if(message.content.includes("ez") {
+    let commandFile = require(`./commands/ez.js`)
+    commandFile.run(message, client, args, cmd)
+  }
   if(!message.content.startsWith(prefix)) return
   try {
     let commandFile = require(`./commands/${cmd}.js`)
